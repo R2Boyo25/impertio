@@ -1,0 +1,11 @@
+#+TITLE: Impertio
+#+DESCRIPTION: Simple blogging software for org-mode users, using WebDAV for post editing.
+#+AUTHOR: Kazani
+
+* Routes
+
+#+BEGIN_SRC
+/ - homepage
+/[<collection>/]<post-name> - a post
+/[<collection>/]<post-name>.org - the source of the post
+#+END_SRC
