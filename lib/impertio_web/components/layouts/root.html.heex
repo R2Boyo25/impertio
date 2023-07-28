@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title>
+      <%= assigns[:page_title] || "Impertio" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <img class="nav-icon" pxh-track-static src={~p"/assets/pfp-48px.png"}/>
+        <div class="cursor"><%= @conn.host %></div>
+      </div>
+      <div>
+        <a :for={category <- ["programming", "linux", "politics"]} href={String.downcase(category)}><%=String.capitalize(category)%></a>
+      </div>
+    </nav>
+    <%= @inner_content %>
+  </body>
+</html>

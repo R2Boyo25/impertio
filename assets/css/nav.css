@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;700&display=swap');
+
+@keyframes cursor-anim {
+    0% {opacity: 100%;}
+    50% {opacity: 0%;}
+}
+
+nav {
+    font-family: "Red Hat Mono",  monospace;
+    font-weight: 700;
+    font-size: 20px;
+    
+    position: sticky;
+    width: 100%;
+    margin: -8px -8px 32px -8px;
+    height: var(--navbar-height);
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 0px var(--navbar-padding);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > div {
+    color: var(--navbar-text);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: var(--navbar-padding);
+    flex-wrap: nowrap;
+}
+
+.cursor::after {
+    content: "a";
+    overflow: hidden;
+
+    margin-left: 5px;
+    
+    background-color: var(--navbar-text);
+    
+    animation-name: cursor-anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    transition: none !important;
+    opacity: 0%;
+}
+
+.nav-icon {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+nav a::before {
+    content: "[";
+    color: var(--navbar-text);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--navbar-link);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a::after {
+    content: "]";
+    color: var(--navbar-text);
+}

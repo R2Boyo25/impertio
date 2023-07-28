@@ -1,0 +1,11 @@
+html {
+    --primary-bg: #2d2d2d;
+    --primary: white;
+    --navbar-bg: #131313;
+    --navbar-text: #e0e0e0;
+    --navbar-link: #008a00;
+
+    --navbar-height: 64px;
+    --navbar-content-height: 48px;
+    --navbar-padding: calc((var(--navbar-height) - var(--navbar-content-height)) / 2);
+}
