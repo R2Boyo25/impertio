@@ -17,7 +17,9 @@ defmodule Impertio.Application do
       # Start Finch
       {Finch, name: Impertio.Finch},
       # Start the Endpoint (http/https)
-      ImpertioWeb.Endpoint
+      ImpertioWeb.Endpoint,
+      # Single Redis connection
+      {Redix, name: :redix}
       # Start a worker by calling: Impertio.Worker.start_link(arg)
       # {Impertio.Worker, arg}
     ]

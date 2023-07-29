@@ -18,7 +18,7 @@
         <div class="cursor"><%= @conn.host %></div>
       </div>
       <div>
-        <a :for={category <- ["programming", "linux", "politics"]} href={String.downcase(category)}><%=String.capitalize(category)%></a>
+        <a :for={category <- ["CS", "SysAdmin", "Politics"]} href={String.downcase(category)}><%=category%></a>
       </div>
     </nav>
     <%= @inner_content %>

@@ -42,7 +42,7 @@ nav > div {
     
     animation-name: cursor-anim;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 5;
     animation-timing-function: step-end;
     transition: none !important;
     opacity: 0%;

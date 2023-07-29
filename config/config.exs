@@ -7,9 +7,6 @@
 # General application configuration
 import Config
 
-config :impertio,
-  ecto_repos: [Impertio.Repo]
-
 # Configures the endpoint
 config :impertio, ImpertioWeb.Endpoint,
   url: [host: "localhost"],
