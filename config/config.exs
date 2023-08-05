@@ -15,23 +15,15 @@ config :impertio, ImpertioWeb.Endpoint,
     layout: false
   ],
   pubsub_server: Impertio.PubSub,
-  live_view: [signing_salt: "Vw6WBWPM"]
-
-# Configures the mailer
-#
-# By default it uses the "Local" adapter which stores the emails
-# locally. You can see the emails in your browser, at "/dev/mailbox".
-#
-# For production it's recommended to configure a different adapter
-# at the `config/runtime.exs`.
-config :impertio, Impertio.Mailer, adapter: Swoosh.Adapters.Local
+  live_view: [signing_salt: "Vw6WBWPM"],
+  data_dir: "./data"
 
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
   default: [
     args:
-      ~w(js/app.js --asset-names=[name] --loader:.png=copy --bundle --target=es2017 --minify --outdir=../priv/static/assets --external:/fonts/*),
+      ~w(js/app.js --asset-names=[name] --loader:.png=copy --bundle --target=es2017 --minify --outdir=../priv/static/assets --external:/fonts/* --out-extension:.js=.mjs --sourcemap=external),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]

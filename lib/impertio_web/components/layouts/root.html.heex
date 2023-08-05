@@ -8,17 +8,17 @@
       <%= assigns[:page_title] || "Impertio" %>
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
-    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.mjs"}>
     </script>
   </head>
   <body>
     <nav>
       <div>
-        <img class="nav-icon" pxh-track-static src={~p"/assets/pfp-48px.png"}/>
+        <img class="nav-icon" pxh-track-static src={~p"/assets/pfp-48px.png"} />
         <div class="cursor"><%= @conn.host %></div>
       </div>
       <div>
-        <a :for={category <- ["CS", "SysAdmin", "Politics"]} href={String.downcase(category)}><%=category%></a>
+        <a :for={category <- Impertio.get_categories()} href={String.downcase(category)}><%= category %></a>
       </div>
     </nav>
     <%= @inner_content %>

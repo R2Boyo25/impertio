@@ -42,3 +42,7 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+import hljs from 'highlight.js'
+
+hljs.highlightAll();
+console.log(hljs);

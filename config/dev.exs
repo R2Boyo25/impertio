@@ -1,15 +1,5 @@
 import Config
 
-# Configure your database
-config :impertio, Impertio.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "impertio_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -25,7 +15,7 @@ config :impertio, ImpertioWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "2Osi/z1347qqU2IjDb1nfPq7iHDBZLhRMv3L09Y0RiNF815/0Swa9hl19j0EX16r",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
   ]
 
 # ## SSL Support
@@ -73,6 +63,3 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
-
-# Disable swoosh api client as it is only required for production adapters.
-config :swoosh, :api_client, false

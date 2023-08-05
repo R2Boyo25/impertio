@@ -10,8 +10,6 @@ defmodule Impertio.Application do
     children = [
       # Start the Telemetry supervisor
       ImpertioWeb.Telemetry,
-      # Start the Ecto repository
-      Impertio.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: Impertio.PubSub},
       # Start Finch

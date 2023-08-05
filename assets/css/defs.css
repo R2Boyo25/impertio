@@ -1,11 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter&family=Red+Hat+Mono:wght@400;700&family=Ubuntu&display=swap');
+
 html {
     --primary-bg: #2d2d2d;
     --primary: white;
     --navbar-bg: #131313;
     --navbar-text: #e0e0e0;
     --navbar-link: #008a00;
-
+    --navbar-font: "Red Hat Mono", monospace;
+    
     --navbar-height: 64px;
     --navbar-content-height: 48px;
     --navbar-padding: calc((var(--navbar-height) - var(--navbar-content-height)) / 2);
+
+    --content-padding: 25px;
+    --content-font: "Inter", sans-serif;
+    --line-height: 1.4;
+    --heading-font: "Ubuntu", sans-serif;
+
+    --code-font: "IBM Plex Mono", monospace;
+    --code-bg: #131313;
+
+    --block-border-radius: 10px;
+    
+    --table-head-bg: #000000ae;
+    --table-bg: #00000000;
+    --table-alt-bg: #00000050;
+    --table-hover-bg: #00000030;
+    --table-hover-alt-bg: #00000070;
 }
