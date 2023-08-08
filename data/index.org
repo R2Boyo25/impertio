@@ -1,0 +1,18 @@
+#+TITLE: Hello!
+#+AUTHOR: Kazani
+#+TIME: 2023-08-07T14:23:00-05
+
+# this is a test
+
+#+BEGIN_SRC c
+  int main(int argc, char** argv) {
+    printf("Hello, world!\n");
+
+    return 0;   
+  }
+#+END_SRC
+
+Wow, C code works. Well, almost. It doesn't have syntax highlighting.
+
+| this is a table | this is another column |
+| $$ 1 + 1 $$     | $$ 2 $$                |

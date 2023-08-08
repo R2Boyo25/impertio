@@ -9,7 +9,14 @@ defmodule Impertio.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
@@ -46,8 +53,9 @@ defmodule Impertio.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:redix, "~> 1.1"},
-
-      {:orgmode, git: "https://github.com/r2boyo25/orgmode-ex"}
+      {:orgmode, git: "https://github.com/r2boyo25/orgmode-ex"},
+      {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.10", only: :test}
     ]
   end
 

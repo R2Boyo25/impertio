@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
 }
 
+#article-info {
+    margin-top: -0.67em;
+}
+
 @media (min-width: 640px) {
     #content {
         max-width: calc(640px - var(--content-padding));

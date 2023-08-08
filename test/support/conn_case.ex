@@ -27,12 +27,10 @@ defmodule ImpertioWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import ImpertioWeb.ConnCase
     end
   end
 
   setup tags do
-    Impertio.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end

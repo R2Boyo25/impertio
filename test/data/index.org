@@ -1,0 +1,14 @@
+#+TITLE: Kazani.dev
+
+Hello, world!
+
+#+BEGIN_SRC c
+  int main(int argc, char** argv) {
+    printf("Hello, world!\n");
+
+    return 0;   
+  }
+#+END_SRC
+
+| this is a table | this is another column |
+| $$ 1 + 1 $$     | $$ 2 $$                |

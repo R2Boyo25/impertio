@@ -13,6 +13,7 @@ config :impertio, ImpertioWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
+  server: true,
   secret_key_base: "2Osi/z1347qqU2IjDb1nfPq7iHDBZLhRMv3L09Y0RiNF815/0Swa9hl19j0EX16r",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}

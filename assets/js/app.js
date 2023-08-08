@@ -44,5 +44,7 @@ window.liveSocket = liveSocket
 
 import hljs from 'highlight.js'
 
-hljs.highlightAll();
-console.log(hljs);
+window.addEventListener("onload", () => {
+    hljs.highlightAll();
+    console.log(hljs);
+});

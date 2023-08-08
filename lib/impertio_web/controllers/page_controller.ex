@@ -4,6 +4,16 @@ defmodule ImpertioWeb.PageController do
   def home(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
-    render(conn, :home, layout: false)
+    case Impertio.locate_file("/") do
+      {:ok, path} ->
+        render(conn, :home,
+          layout: false,
+          page_content: Impertio.HTMLGen.convert(Orgmode.parse_file!(path))
+        )
+
+      {:error, message} ->
+        {code, error_message} = Impertio.split_error(message)
+        ImpertioWeb.ErrorHTML.render(Integer.to_string(code) <> ".html", message: error_message)
+    end
   end
 end
